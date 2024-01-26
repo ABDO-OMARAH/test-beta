@@ -1,8 +1,8 @@
 :root {
   --font-bage:sans-serif;
   --background-color:#05213b;
-  --height-nav:12vh;
-  --height-nav-f-s-media:13.5vh;
+  --height-nav:4.5rem;
+  --height-nav-f-s-media:5.5rem;
   --color-bage:#ddd;
   --color-bage-hover:#ffffff;
 }
@@ -28,7 +28,7 @@ a {
   background-color: rgba(0, 0, 0, 0.4);
   -webkit-backdrop-filter: blur(30px);
           backdrop-filter: blur(30px);
-  padding: 0 5%;
+  padding: 0 4rem;
   position: relative;
   display: flex;
   align-items: center;
@@ -51,7 +51,7 @@ a {
 * body .header .logo {
   display: inline-block;
   color: var(--color-bage);
-  font-size: 3rem;
+  font-size: 3.5rem;
   text-transform: uppercase;
   font-weight: 700;
 }
@@ -69,14 +69,14 @@ a {
   color: var(--color-bage-hover);
 }
 
-@media (max-width: 1042px) {
+@media (max-width: 1053px) {
   * body .header {
     flex-direction: column;
     height: var(--height-nav-f-s-media);
   }
   * body .header .logo {
     padding: 5px 0 0 0px;
-    font-size: 2.6rem;
+    font-size: 2.8rem;
   }
   * body .header .navbar {
     display: block;
@@ -84,7 +84,7 @@ a {
     padding: 10px 0 10px 0;
   }
 }
-@media (max-width: 938px) {
+@media (max-width: 972px) {
   * body .header {
     align-items: center;
   }
@@ -92,7 +92,7 @@ a {
     position: absolute;
     top: 18%;
     left: 5%;
-    font-size: 2.2rem;
+    font-size: 2.5rem;
   }
   * body .header .navbar {
     transform: translate(0, -100vh);
@@ -139,7 +139,6 @@ a {
     height: -moz-fit-content;
     height: fit-content;
     width: 100vw;
-    transition: 0.1s linear;
   }
   * body .header #check:checked ~ .navbar .navbar-link {
     display: block;
