@@ -93,7 +93,7 @@ a {
   * body .header .logo {
     position: absolute;
     top: 0.2rem;
-    left: 3rem;
+    left: 2.5rem;
     font-size: 2.5rem;
   }
   * body .header .navbar {
@@ -116,6 +116,7 @@ a {
   }
   * body .header #check, * body .header .icon {
     position: absolute;
+    right:2.5rem
     align-self: flex-end;
     color: var(--color-bage);
   }
