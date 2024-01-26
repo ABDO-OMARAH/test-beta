@@ -3,6 +3,7 @@
   --background-color:#05213b;
   --height-nav:4.5rem;
   --height-nav-f-s-media:5.5rem;
+  --height-nav-f-s-media-2:3.5rem;
   --color-bage:#ddd;
   --color-bage-hover:#ffffff;
 }
@@ -69,7 +70,7 @@ a {
   color: var(--color-bage-hover);
 }
 
-@media (max-width: 1053px) {
+@media (max-width: 1268px) {
   * body .header {
     flex-direction: column;
     height: var(--height-nav-f-s-media);
@@ -86,12 +87,13 @@ a {
 }
 @media (max-width: 972px) {
   * body .header {
+    height: var(--height-nav-f-s-media-2);
     align-items: center;
   }
   * body .header .logo {
     position: absolute;
-    top: 18%;
-    left: 5%;
+    top: 0;
+    left: 3rem;
     font-size: 2.5rem;
   }
   * body .header .navbar {
@@ -123,7 +125,7 @@ a {
   * body .header .icon {
     display: block;
     font-size: 2.2rem;
-    top: 26%;
+    top: 20%;
   }
   * body .header .icon #icon-close {
     display: none;
@@ -135,7 +137,7 @@ a {
     display: block;
   }
   * body .header #check:checked ~ .navbar {
-    transform: translate(0, var(--height-nav-f-s-media));
+    transform: translate(0, var(--height-nav-f-s-media-2));
     height: -moz-fit-content;
     height: fit-content;
     width: 100vw;
