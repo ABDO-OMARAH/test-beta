@@ -3,7 +3,7 @@
   --background-color:#05213b;
   --height-nav:4.5rem;
   --height-nav-f-s-media:5.5rem;
-  --height-nav-f-s-media-2:3.5rem;
+  --height-nav-f-s-media-2:4rem;
   --color-bage:#ddd;
   --color-bage-hover:#ffffff;
 }
@@ -92,7 +92,7 @@ a {
   }
   * body .header .logo {
     position: absolute;
-    top: 0;
+    top: 0.2rem;
     left: 3rem;
     font-size: 2.5rem;
   }
