@@ -51,7 +51,7 @@ a {
 * body .header .logo {
   display: inline-block;
   color: var(--color-bage);
-  font-size: 2rem;
+  font-size: 3rem;
   text-transform: uppercase;
   font-weight: 700;
 }
@@ -60,6 +60,7 @@ a {
 }
 * body .header .navbar .navbar-link {
   display: inline-block;
+  font-size: 1rem;
   color: var(--color-bage);
   margin: 0 10px;
   text-transform: capitalize;
@@ -71,15 +72,16 @@ a {
 @media (max-width: 1042px) {
   * body .header {
     flex-direction: column;
-    padding-bottom: 10px;
     height: var(--height-nav-f-s-media);
   }
   * body .header .logo {
     padding: 5px 0 0 0px;
+    font-size: 2.6rem;
   }
   * body .header .navbar {
     display: block;
-    padding: 10px 0;
+    margin: 0 0px;
+    padding: 10px 0 10px 0;
   }
 }
 @media (max-width: 938px) {
@@ -137,7 +139,7 @@ a {
     height: -moz-fit-content;
     height: fit-content;
     width: 100vw;
-    transition: 0.3s ease;
+    transition: 0.1s linear;
   }
   * body .header #check:checked ~ .navbar .navbar-link {
     display: block;
