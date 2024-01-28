@@ -1,11 +1,16 @@
 :root {
-  --font-bage:sans-serif;
-  --background-color:#05213b;
-  --height-nav:4.5rem;
-  --height-nav-f-s-media:5.5rem;
-  --height-nav-f-s-media-2:4rem;
-  --color-bage:#ddd;
-  --color-bage-hover:#ffffff;
+  --font-bage: sans-serif;
+  --background-color: #05213b;
+  --height-nav: 4.5rem;
+  --color-bage: #ddd;
+  --color-bage-hover: #ffffff;
+  --top-shadow-text:-79px;
+  --right-shadow-text:-407px;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--height-nav);
 }
 
 a {
@@ -30,10 +35,12 @@ a {
   -webkit-backdrop-filter: blur(30px);
           backdrop-filter: blur(30px);
   padding: 0 4rem;
-  position: relative;
+  position: fixed;
+  top: 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  z-index: 9999;
 }
 * body .header:after {
   content: "";
@@ -56,7 +63,8 @@ a {
   text-transform: uppercase;
   font-weight: 700;
 }
-* body .header #check, * body .header .icon {
+* body .header #check,
+* body .header .icon {
   display: none;
 }
 * body .header .navbar .navbar-link {
@@ -69,11 +77,193 @@ a {
 * body .header .navbar .navbar-link:hover {
   color: var(--color-bage-hover);
 }
+* .section {
+  width: 100%;
+  min-height: calc(100vh - var(--height-nav));
+  padding-left: 5%;
+  padding-right: 5%;
+  overflow: hidden;
+}
+* .section-1 {
+  margin-top: var(--height-nav);
+  background-color: #5e5a5a;
+  position: relative;
+}
+* .section-1 h1 {
+  padding: 20px 0 0;
+  font-weight: 600;
+  font-size: 2.2rem;
+  text-transform: capitalize;
+  color: #f3e9e9;
+  mix-blend-mode: hard-light;
+}
+* .section-1 h1::after {
+  content: "anatomy";
+  position: absolute;
+  top: var(--top-shadow-text);
+  right: calc(var(--right-shadow-text));
+  font-size: 11rem;
+  font-weight: 900;
+  color: rgba(0, 0, 0, 0.3764705882);
+}
+* .section-2 {
+  background-color: #2b85ec;
+  position: relative;
+}
+* .section-2 h1 {
+  padding: 20px 0 0;
+  font-weight: 600;
+  font-size: 2.2rem;
+  text-transform: capitalize;
+  color: #f3e9e9;
+  mix-blend-mode: hard-light;
+}
+* .section-2 h1::after {
+  content: "histology";
+  position: absolute;
+  top: var(--top-shadow-text);
+  right: calc(var(--right-shadow-text) - 50px);
+  font-size: 11rem;
+  font-weight: 900;
+  color: rgba(0, 0, 0, 0.3764705882);
+}
+* .section-3 {
+  background-color: #d11372;
+  position: relative;
+}
+* .section-3 h1 {
+  padding: 20px 0 0;
+  font-weight: 600;
+  font-size: 2.2rem;
+  text-transform: capitalize;
+  color: #f3e9e9;
+  mix-blend-mode: hard-light;
+}
+* .section-3 h1::after {
+  content: "biochemistry";
+  position: absolute;
+  top: var(--top-shadow-text);
+  right: calc(var(--right-shadow-text) - 420px);
+  font-size: 11rem;
+  font-weight: 900;
+  color: rgba(0, 0, 0, 0.3764705882);
+}
+* .section-4 {
+  background-color: #770b69;
+  position: relative;
+}
+* .section-4 h1 {
+  padding: 20px 0 0;
+  font-weight: 600;
+  font-size: 2.2rem;
+  text-transform: capitalize;
+  color: #f3e9e9;
+  mix-blend-mode: hard-light;
+}
+* .section-4 h1::after {
+  content: "physiology";
+  position: absolute;
+  top: var(--top-shadow-text);
+  right: calc(var(--right-shadow-text) - 180px);
+  font-size: 11rem;
+  font-weight: 900;
+  color: rgba(0, 0, 0, 0.3764705882);
+}
+* .section-5 {
+  background-color: #096147;
+  position: relative;
+}
+* .section-5 h1 {
+  padding: 20px 0 0;
+  font-weight: 600;
+  font-size: 2.2rem;
+  text-transform: capitalize;
+  color: #f3e9e9;
+  mix-blend-mode: hard-light;
+}
+* .section-5 h1::after {
+  content: "medical te";
+  position: absolute;
+  top: var(--top-shadow-text);
+  right: calc(var(--right-shadow-text) - 180px);
+  font-size: 11rem;
+  font-weight: 900;
+  color: rgba(0, 0, 0, 0.3764705882);
+}
+* .section-6 {
+  background-color: #770b69;
+  position: relative;
+}
+* .section-6 h1 {
+  padding: 20px 0 0;
+  font-weight: 600;
+  font-size: 2.2rem;
+  text-transform: capitalize;
+  color: #f3e9e9;
+  mix-blend-mode: hard-light;
+}
+* .section-6 h1::after {
+  content: "phiscology";
+  position: absolute;
+  top: var(--top-shadow-text);
+  right: calc(var(--right-shadow-text) - 195px);
+  font-size: 11rem;
+  font-weight: 900;
+  color: rgba(0, 0, 0, 0.3764705882);
+}
+* .section-7 {
+  background-color: #0e5d6d;
+  position: relative;
+}
+* .section-7 h1 {
+  padding: 20px 0 0;
+  font-weight: 600;
+  font-size: 2.2rem;
+  text-transform: capitalize;
+  color: #f3e9e9;
+  mix-blend-mode: hard-light;
+}
+* .section-7 h1::after {
+  content: "biophysics";
+  position: absolute;
+  top: var(--top-shadow-text);
+  right: calc(var(--right-shadow-text) - 190px);
+  font-size: 11rem;
+  font-weight: 900;
+  color: rgba(0, 0, 0, 0.3764705882);
+}
+* .section-8 {
+  background-color: #600d91;
+  position: relative;
+}
+* .section-8 h1 {
+  padding: 20px 0 0;
+  font-weight: 600;
+  font-size: 2.2rem;
+  text-transform: capitalize;
+  color: #f3e9e9;
+  mix-blend-mode: hard-light;
+}
+* .section-8 h1::after {
+  content: "communic";
+  position: absolute;
+  top: var(--top-shadow-text);
+  right: calc(var(--right-shadow-text) - 170px);
+  font-size: 11rem;
+  font-weight: 900;
+  color: rgba(0, 0, 0, 0.3764705882);
+}
 
 @media (max-width: 1268px) {
+  :root {
+    --height-nav: 5.5rem;
+  }
+  html {
+    scroll-padding-top: var(--height-nav);
+  }
   * body .header {
     flex-direction: column;
-    height: var(--height-nav-f-s-media);
+    height: var(--height-nav);
   }
   * body .header .logo {
     padding: 5px 0 0 0px;
@@ -86,14 +276,20 @@ a {
   }
 }
 @media (max-width: 972px) {
+  :root {
+    --height-nav: 3.5rem;
+  }
+  html {
+    scroll-padding-top: var(--height-nav);
+  }
   * body .header {
-    height: var(--height-nav-f-s-media-2);
+    height: var(--height-nav);
     align-items: center;
   }
   * body .header .logo {
     position: absolute;
-    top: 0.2rem;
-    left: 2.5rem;
+    top: 0;
+    left: 5%;
     font-size: 2.5rem;
   }
   * body .header .navbar {
@@ -104,17 +300,22 @@ a {
     display: flex;
     flex-direction: column;
     text-align: center;
-    background-color: rgba(0, 0, 0, 0.1);
-    -webkit-backdrop-filter: blur(50px);
-            backdrop-filter: blur(50px);
+    background-color: rgba(0, 0, 0, 0.5);
+    -webkit-backdrop-filter: blur(90px);
+            backdrop-filter: blur(90px);
   }
   * body .header .navbar .navbar-link {
     transform: translate(0, -150px);
     display: none;
     font-size: 1.2rem;
     margin-top: 0.9rem;
+    transition: 0.1s linear;
   }
-  * body .header #check, * body .header .icon {
+  * body .header .navbar .navbar-link:hover {
+    font-size: 1.3rem;
+  }
+  * body .header #check,
+  * body .header .icon {
     position: absolute;
     align-self: flex-end;
     color: var(--color-bage);
@@ -125,8 +326,8 @@ a {
   * body .header .icon {
     display: block;
     font-size: 2.2rem;
-    right: 2.5rem;
     top: 20%;
+    right: 5%;
   }
   * body .header .icon #icon-close {
     display: none;
@@ -138,7 +339,7 @@ a {
     display: block;
   }
   * body .header #check:checked ~ .navbar {
-    transform: translate(0, var(--height-nav-f-s-media-2));
+    transform: translate(0, var(--height-nav));
     height: -moz-fit-content;
     height: fit-content;
     width: 100vw;
@@ -146,5 +347,11 @@ a {
   * body .header #check:checked ~ .navbar .navbar-link {
     display: block;
     transform: translate(0, 0);
+  }
+  .section h1 {
+    font-size: 1.8rem;
+  }
+  .section h1:after {
+    display: none;
   }
 }/*# sourceMappingURL=style.css.map */
