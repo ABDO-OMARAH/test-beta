@@ -82,7 +82,72 @@ a {
   min-height: calc(100vh - var(--height-nav));
   padding-left: 5%;
   padding-right: 5%;
+  padding-bottom: 4%;
   overflow: hidden;
+}
+* .section .container {
+  width: 90%;
+  min-height: calc(100vh - (var(--height-nav) + 20vh));
+  margin-left: 5%;
+  position: relative;
+}
+* .section .container .card-lecture {
+  width: 100%;
+  min-height: calc(100vh - (var(--height-nav) + 20vh));
+  background-color: rgba(2, 2, 2, 0.368627451);
+  border-radius: 2vw;
+  padding: 20px;
+  position: relative;
+}
+* .section .container .card-lecture .card-lecture-logo {
+  position: absolute;
+  top: 43%;
+  left: -181px;
+  transform: rotate(270deg);
+  font-weight: 200;
+  letter-spacing: 30px;
+  color: var(--color-bage);
+  font-size: 20px;
+  text-transform: uppercase;
+}
+* .section .container .card-lecture span {
+  position: absolute;
+  top: 10.5px;
+  left: -30px;
+  transform: rotate(270deg);
+  font-weight: 200;
+  letter-spacing: 30px;
+  color: var(--color-bage);
+  font-size: 20px;
+  text-transform: uppercase;
+  animation: animate-2 4s linear forwards;
+  animation-delay: 2s;
+}
+@keyframes animate-2 {
+  0% {
+    position: absolute;
+    top: calc(10% - 30px);
+    left: -29px;
+    transform: rotate(270deg);
+    color: var(--color-bage);
+  }
+  50% {
+    position: absolute;
+    top: calc(10% - 30px);
+    left: -29px;
+    transform: translateY(50vh);
+  }
+  100% {
+    transform: translateY(100vh);
+    font-size: 25px;
+    color: #770b34;
+  }
+}
+* .section .container .card-lecture .lecture-lec {
+  width: 90%;
+  min-height: calc(100vh - (var(--height-nav) + 25vh));
+  margin-left: 5%;
+  border: 2px solid var(--color-bage);
 }
 * .section-1 {
   margin-top: var(--height-nav);
@@ -95,7 +160,6 @@ a {
   font-size: 2.2rem;
   text-transform: capitalize;
   color: #f3e9e9;
-  mix-blend-mode: hard-light;
 }
 * .section-1 h1::after {
   content: "anatomy";
@@ -105,6 +169,10 @@ a {
   font-size: 11rem;
   font-weight: 900;
   color: rgba(0, 0, 0, 0.3764705882);
+}
+* .section-1 .card-lecture-logo {
+  top: 46% !important;
+  left: -160px !important;
 }
 * .section-2 {
   background-color: #2b85ec;
@@ -149,7 +217,7 @@ a {
   color: rgba(0, 0, 0, 0.3764705882);
 }
 * .section-4 {
-  background-color: #770b69;
+  background-color: #450bb1;
   position: relative;
 }
 * .section-4 h1 {
@@ -191,7 +259,7 @@ a {
   color: rgba(0, 0, 0, 0.3764705882);
 }
 * .section-6 {
-  background-color: #770b69;
+  background-color: #770b34;
   position: relative;
 }
 * .section-6 h1 {
