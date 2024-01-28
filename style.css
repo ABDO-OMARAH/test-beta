@@ -112,7 +112,7 @@ a {
 }
 * .section .container .card-lecture span {
   position: absolute;
-  top: 10.5px;
+  top: 4%;
   left: -30px;
   transform: rotate(270deg);
   font-weight: 200;
