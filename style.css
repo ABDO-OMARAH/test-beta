@@ -4,8 +4,8 @@
   --height-nav: 4.5rem;
   --color-bage: #ddd;
   --color-bage-hover: #ffffff;
-  --top-shadow-text:-79px;
-  --right-shadow-text:-407px;
+  --top-shadow-text: -79px;
+  --right-shadow-text: -407px;
 }
 
 html {
@@ -17,6 +17,10 @@ a {
   text-decoration: none;
 }
 
+@font-face {
+  font-family: BE;
+  src: url(BalooThambi2-ExtraBold.ttf);
+}
 * {
   padding: 0%;
   margin: 0%;
@@ -84,11 +88,18 @@ a {
   padding-right: 5%;
   padding-bottom: 4%;
   overflow: hidden;
+  position: relative;
+}
+* .section h1 {
+  font-size: 2.4rem;
+}
+* .section h1 .icon-b {
+  display: none;
 }
 * .section .container {
-  width: 90%;
+  width: 95%;
   min-height: calc(100vh - (var(--height-nav) + 20vh));
-  margin-left: 5%;
+  margin-left: 2.5%;
   position: relative;
 }
 * .section .container .card-lecture {
@@ -111,20 +122,116 @@ a {
   text-transform: uppercase;
 }
 * .section .container .card-lecture .lecture-lec {
-  width: 90%;
+  width: 95%;
+  background-color: rgba(221, 221, 221, 0.5411764706);
   min-height: calc(100vh - (var(--height-nav) + 25vh));
-  margin-left: 5%;
-  border: 2px solid var(--color-bage);
+  margin-left: 2.5%;
+  border-radius: 12px;
+  box-shadow: 3px 5px 15px rgba(0, 0, 0, 0.6156862745);
+  padding: 4px 3% 3% 3%;
+}
+* .section .container .card-lecture .lecture-lec .lecture-link {
+  display: block;
+  padding: 7px 5px;
+  border: 1px solid rgba(0, 0, 0, 0.368627451);
+  background-color: rgba(221, 221, 221, 0.6980392157);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3882352941);
+  margin-top: 15px;
+}
+* .section .container .card-lecture .lecture-lec .lecture-link .icon-b {
+  color: #000;
+  font-size: 1.9rem;
+  padding-left: 4px;
+}
+* .section .container .card-lecture .lecture-lec .lecture-link span {
+  display: inline-block;
+  color: #000;
+  text-transform: capitalize;
+  font-family: sans-serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: 3px;
+}
+* .section .container .card-lecture .lecture-lec .lecture-link:visited {
+  color: #450bb1;
+  background-color: rgba(46, 43, 43, 0.9803921569);
+}
+* .body-section {
+  margin-top: var(--height-nav);
+}
+* .body-section .title-text h1 {
+  padding: 10px 0 0;
+  text-align: center;
+  font-size: 2rem;
+  letter-spacing: 2px;
+  color: rgba(221, 221, 221, 0.5803921569);
+  font-family: BE;
+}
+* .body-section .title-text h1 p {
+  position: relative;
+  display: inline-block;
+}
+* .body-section .title-text h1 p span:nth-child(1) {
+  position: absolute;
+  transform: translateX(-17px);
+  animation: animate-text-logo-2 2s 2.7 ease-in-out backwards;
+  animation-delay: 2s;
+  transition: 0s;
+}
+* .body-section .title-text h1 p span:nth-child(2) {
+  animation: animate-text-logo 2s 2 ease-in-out forwards;
+  animation-delay: 2s;
+  transition: 0s;
+}
+* .body-section .title-text h1 p span:nth-child(3) {
+  font-family: sans-serif;
+  font-weight: 700;
+  animation: animate-text-logo-hu 0.5s 1 ease-in-out forwards;
+  animation-delay: 6s;
+}
+* .body-section .sub-title-text {
+  padding: 7px 0 0;
+  text-transform: capitalize;
+  text-align: center;
+  color: rgba(221, 221, 221, 0.9058823529);
+  font-size: 1.3rem;
+  font-family: BE;
+}
+@keyframes animate-text-logo {
+  100% {
+    color: #fff;
+    text-shadow: 0px 0px 20px rgba(255, 255, 255, 0.7058823529);
+  }
+}
+@keyframes animate-text-logo-hu {
+  0% {
+    color: #fff;
+    text-shadow: 0px 0px 20px rgba(255, 255, 255, 0.7058823529);
+  }
+  30% {
+    color: rgba(221, 221, 221, 0.3411764706);
+    text-shadow: 0px 0px 20px transparent;
+  }
+  100% {
+    color: #fff;
+    text-shadow: 0px 0px 20px rgba(255, 255, 255, 0.7058823529);
+  }
+}
+@keyframes animate-text-logo-2 {
+  100% {
+    color: #fff;
+    text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.7058823529);
+  }
 }
 * .section-1 {
-  margin-top: var(--height-nav);
   background-color: #521f43;
-  position: relative;
 }
 * .section-1 h1 {
   padding: 20px 0 0;
   font-weight: 600;
-  font-size: 2.2rem;
   text-transform: capitalize;
   color: #f3e9e9;
 }
@@ -139,15 +246,12 @@ a {
 }
 * .section-2 {
   background-color: #2b85ec;
-  position: relative;
 }
 * .section-2 h1 {
   padding: 20px 0 0;
   font-weight: 600;
-  font-size: 2.2rem;
   text-transform: capitalize;
   color: #f3e9e9;
-  mix-blend-mode: hard-light;
 }
 * .section-2 h1::after {
   content: "histology";
@@ -160,15 +264,12 @@ a {
 }
 * .section-3 {
   background-color: #d11372;
-  position: relative;
 }
 * .section-3 h1 {
   padding: 20px 0 0;
   font-weight: 600;
-  font-size: 2.2rem;
   text-transform: capitalize;
   color: #f3e9e9;
-  mix-blend-mode: hard-light;
 }
 * .section-3 h1::after {
   content: "biochemistry";
@@ -181,12 +282,10 @@ a {
 }
 * .section-4 {
   background-color: #450bb1;
-  position: relative;
 }
 * .section-4 h1 {
   padding: 20px 0 0;
   font-weight: 600;
-  font-size: 2.2rem;
   text-transform: capitalize;
   color: #f3e9e9;
   mix-blend-mode: hard-light;
@@ -202,12 +301,10 @@ a {
 }
 * .section-5 {
   background-color: #096147;
-  position: relative;
 }
 * .section-5 h1 {
   padding: 20px 0 0;
   font-weight: 600;
-  font-size: 2.2rem;
   text-transform: capitalize;
   color: #f3e9e9;
   mix-blend-mode: hard-light;
@@ -223,12 +320,10 @@ a {
 }
 * .section-6 {
   background-color: #770b34;
-  position: relative;
 }
 * .section-6 h1 {
   padding: 20px 0 0;
   font-weight: 600;
-  font-size: 2.2rem;
   text-transform: capitalize;
   color: #f3e9e9;
   mix-blend-mode: hard-light;
@@ -244,12 +339,10 @@ a {
 }
 * .section-7 {
   background-color: #0e5d6d;
-  position: relative;
 }
 * .section-7 h1 {
   padding: 20px 0 0;
   font-weight: 600;
-  font-size: 2.2rem;
   text-transform: capitalize;
   color: #f3e9e9;
   mix-blend-mode: hard-light;
@@ -265,15 +358,12 @@ a {
 }
 * .section-8 {
   background-color: #600d91;
-  position: relative;
 }
 * .section-8 h1 {
   padding: 20px 0 0;
   font-weight: 600;
-  font-size: 2.2rem;
   text-transform: capitalize;
   color: #f3e9e9;
-  mix-blend-mode: hard-light;
 }
 * .section-8 h1::after {
   content: "communic";
@@ -380,9 +470,24 @@ a {
     transform: translate(0, 0);
   }
   .section h1 {
-    font-size: 1.8rem;
+    font-size: 2.1rem;
   }
   .section h1:after {
     display: none;
+  }
+  .section .container .card-lecture .card-lecture-logo {
+    font-size: 17px;
+    letter-spacing: 20px;
+    left: -133px;
+  }
+  .section h1 .icon-b {
+    display: block;
+    position: absolute;
+    top: -20px;
+    right: -50px;
+    font-size: 9rem;
+    font-weight: 900;
+    position: absolute;
+    color: rgba(0, 0, 0, 0.3764705882);
   }
 }/*# sourceMappingURL=style.css.map */
