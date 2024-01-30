@@ -269,6 +269,33 @@ a {
   padding-bottom: 7px;
   padding-right: 30px;
 }
+* .body-section-body .text-loading-hello {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  height: 50vh;
+  color: #ddd;
+  font-size: 5rem;
+  font-family: monospace;
+}
+* .body-section-body .text-loading-hello p {
+  border-right: 3px solid #ddd;
+  width: 60%;
+  white-space: nowrap;
+  overflow: clip;
+  animation: typing 3.5s steps(8), cursor1 0.4s step-end infinite alternate;
+}
+@keyframes cursor1 {
+  50% {
+    border-color: transparent;
+  }
+}
+@keyframes typing {
+  from {
+    width: 0;
+  }
+}
 @keyframes animate-text-logo {
   100% {
     color: #fff;
@@ -605,6 +632,9 @@ a {
     max-width: 100%;
     min-height: 45vh;
   }
+  * .body-section-body .text-loading-hello {
+    display: none;
+  }
 }
 @media (max-width: 972px) {
   :root {
@@ -696,7 +726,7 @@ a {
   .section .container .card-lecture .card-lecture-logo {
     font-size: 17px;
     letter-spacing: 20px;
-    left: -133px;
+    left: -131px;
   }
   .body-section-body {
     flex-direction: column;
@@ -710,5 +740,8 @@ a {
     font-weight: 900;
     position: absolute;
     color: rgba(0, 0, 0, 0.3764705882);
+  }
+  * .body-section-body .text-loading-hello {
+    display: none;
   }
 }/*# sourceMappingURL=style.css.map */
