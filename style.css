@@ -94,7 +94,7 @@ a {
   display: inline-block;
   font-size: 1rem;
   color: var(--color-bage);
-  margin: 0 10px;
+  margin: 0 9px;
   text-transform: capitalize;
 }
 * body .header .navbar .navbar-link:hover {
@@ -616,7 +616,7 @@ a {
   mix-blend-mode: hard-light;
 }
 * .section-6 h1::after {
-  content: "phiscology";
+  content: "psychology";
   position: absolute;
   top: var(--top-shadow-text);
   right: calc(var(--right-shadow-text) - 195px);
